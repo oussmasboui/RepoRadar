@@ -1,6 +1,7 @@
 /**
- * @description: Custom types for uder and repo, to extract just what we need from the API.Blog, company, email and location are optional for user. Language and description are optional for repo.
- * 
+ * @description: Custom types for user and repo, extracting only necessary fields from the API.
+ * Blog, company, email, and location are optional for user.
+ * Language and description are optional for repo.
  */
 
 export interface APIUser {
@@ -26,5 +27,5 @@ export interface APIRepo {
   html_url: string;
   language: string;
   description: string;
+  updated_at : string;
 }
-

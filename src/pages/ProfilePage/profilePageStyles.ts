@@ -1,6 +1,29 @@
 import styled from 'styled-components';
 import { RiBookMarkLine } from 'react-icons/ri';
+import DropdownList from 'react-widgets/DropdownList';
+import 'react-widgets/styles.css'; // Import the default CSS styles for react-widgets
 
+
+export const StyledDropdownList = styled(DropdownList)`
+.rw-widget-picker {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px 2px; /* Adjust padding to reduce button size */
+  font-size: 1px; /* Adjust font size to reduce text size */
+  color: #333;
+  cursor: pointer;
+}
+
+.rw-list-option {
+  padding: 5px 5px; /* Adjust padding to reduce option size */
+  font-size: 1px; /* Adjust font size to reduce option text size */
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
+`;
 // most outer container
 export const Container = styled.div`
   --horizontalPadding: 16px;
@@ -24,7 +47,8 @@ export const LeftSide = styled.div`
   padding: 0 var(--horizontalPadding);
   // github division is 25% for the left side on web view and 75% for the right side
   @media (min-width: 768px) {
-    width: 25%;
+    width: 20%;
+    
   }
 `;
 
@@ -135,4 +159,31 @@ export const Tab = styled.div`
       }
     }
   }
+`;
+export const SearchBarContainer = styled.div`
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px;
+  top:20px;
+  border: 1px solid #e1e4e8; /* Add border color */
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  margin-bottom: 20px;
+`;
+
+export const Input = styled.input`
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #d1d5da; /* Add border color */
+  border-radius: 6px;
+  font-size: 14px;
+`;
+
+export const Select = styled.select`
+  padding: 8px;
+  border: 1px solid #d1d5da; /* Add border color */
+  border-radius: 6px;
+  font-size: 14px;
+  margin-left: 10px;
 `;

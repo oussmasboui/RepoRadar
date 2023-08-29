@@ -1,7 +1,7 @@
 /**
- * @description: RepositoryCard component is used to display the repository details in a card. The component is used in the RepositoryList component to display the list of RepositoriesPagefor a user.
+ * @description: Repositories component is used to display the repository details in a card. The component is used in the RepositoryList component to display the list of RepositoriesPagefor a user.
  *
- * @returns: JSX.Element RepositoryCard component with: Container is used to wrap the entire component. Flex is used to align the component. Avatar is used to display the repository avatar. Row is used to display the repository data. Column is used to display the repository data.
+ * @returns: JSX.Element Repositories component with: Container is used to wrap the entire component. Flex is used to align the component. Avatar is used to display the repository avatar. Row is used to display the repository data. Column is used to display the repository data.
  *
  * @interface Props ( in Typescript for an element to receive props, an interface must be defined ). Decscription and language are optional fields as they are not always provided/published by the user.
  *
@@ -11,7 +11,7 @@
  * @props language: language of the repository.
  * @props stars: number of stars of the repository.
  * @props forks: number of forks of the repository.
- * @memberof RepositoryCard
+ * @memberof Repositories
  *
  */
 
@@ -34,20 +34,22 @@ interface Props {
   language?: string;
   stars: number;
   forks: number;
+  updatedAt: string;
 }
 
-const RepositoryCard: FC<Props> = ({
+const Repositories: FC<Props> = ({
   username,
   reponame,
   description,
   language,
   stars,
-  forks
+  forks,
+  updatedAt
 }) => {
   /**
    * @description: languageClass() is used in the CSS to change the color of the language icon. If the language is not provided, the icon color will be 'other' which is the default color of the icon assigned in the CSS.
    * @returns: string
-   * @memberof RepositoryCard
+   * @memberof Repositories
    * @param {string} language
    */
   const languageClass = language ? language.toLowerCase() : 'other';
@@ -65,10 +67,15 @@ const RepositoryCard: FC<Props> = ({
 
       <BottomSide>
         <ul>
+        <li>
+            <span>{updatedAt}</span>
+          </li>
+        {language &&
           <li>
             <div className={`language ${languageClass}`} />
-            <span>{`${language}`}</span>
+            <span> {language}</span>
           </li>
+          }
           <li>
             <StarIcon />
             <span>{stars}</span>
@@ -83,4 +90,4 @@ const RepositoryCard: FC<Props> = ({
   );
 };
 
-export default RepositoryCard;
+export default Repositories;
