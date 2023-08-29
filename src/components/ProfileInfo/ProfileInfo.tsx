@@ -16,7 +16,8 @@
  * @props blog: blog of the user.
  * @returns
  * @memberof ProfileData
- *
+ * @component
+ * @example
  */
 
 import { FC } from 'react';

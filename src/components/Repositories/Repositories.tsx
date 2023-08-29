@@ -12,8 +12,10 @@
  * @props stars: number of stars of the repository.
  * @props forks: number of forks of the repository.
  * @memberof Repositories
- *
- */
+ * @component
+ * @example
+*/
+
 
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
@@ -67,14 +69,14 @@ const Repositories: FC<Props> = ({
 
       <BottomSide>
         <ul>
-        <li>
+          <li>
             <span>{updatedAt}</span>
           </li>
-        {language &&
-          <li>
-            <div className={`language ${languageClass}`} />
-            <span> {language}</span>
-          </li>
+          {language &&
+            <li>
+              <div className={`language ${languageClass}`} />
+              <span> {language}</span>
+            </li>
           }
           <li>
             <StarIcon />

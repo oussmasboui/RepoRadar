@@ -1,6 +1,8 @@
 /**
  * @description Header component is used to dipsplay on top of the page (main container in ProfilePage and RepositoriesPage) and it consists of the sercah bar (SearchFrom) and the logo.
- */
+ * @component
+ * @example
+*/
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';

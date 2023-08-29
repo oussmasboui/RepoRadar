@@ -58,7 +58,7 @@ export const ProfilePage: FC = () => {
   const [filterText, setFilterText] = useState('');
 
   // State for search query input
-  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [searchQuery] = useState<string>('');
 
   // State for selected programming language filter
   const [selectedLanguage, setSelectedLanguage] = useState<string>('');
@@ -91,11 +91,6 @@ export const ProfilePage: FC = () => {
   const programmingLanguages: string[] = Array.from(
     new Set(data?.repos?.map(repo => repo.language).filter(Boolean))
   );
-
-  // Handle changes in the search input
-  const handleSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value);
-  };
 
   // Handle changes in the selected programming language filter
   const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
