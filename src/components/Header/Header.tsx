@@ -23,7 +23,7 @@ const Header: React.FC = () => {
       <GitHubLogo />
       <SearchForm onSubmit={handleSubmit}>
         <input
-          placeholder='Enter Username or Username/Repository Name...'
+          placeholder='Enter Username ...'
           value={search}
           onChange={e => setSearch( e.currentTarget.value )}
         />
