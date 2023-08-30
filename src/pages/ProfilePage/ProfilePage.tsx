@@ -167,7 +167,7 @@ export const ProfilePage: FC = () => {
             {/* Input for repository name search */}
             <Input
               type="text"
-              placeholder="Search Repository ..."
+              placeholder="Enter Repository ..."
               value={filterText}
               onChange={(e) => setFilterText(e.target.value)}
             />
