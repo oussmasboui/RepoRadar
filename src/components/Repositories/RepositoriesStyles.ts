@@ -1,3 +1,7 @@
+// Styled components for repository details display
+
+// TopSide and BottomSide components wrap repository header and details respectively.
+// RepositoryIcon, StarIcon, and ForkIcon are styled components for icons.
 import styled, { css } from 'styled-components';
 import { RiBookMarkLine, RiStarLine } from 'react-icons/ri';
 import { AiOutlineFork } from 'react-icons/ai';

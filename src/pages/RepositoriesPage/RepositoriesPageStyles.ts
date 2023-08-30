@@ -1,3 +1,4 @@
+// Styled components and icons used to style and structure various elements of a GitHub repository page.
 import styled, { css } from 'styled-components';
 import { RiBookMarkLine, RiStarLine } from 'react-icons/ri';
 import { AiOutlineFork } from 'react-icons/ai';

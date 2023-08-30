@@ -1,3 +1,4 @@
+// Styled components and UI definitions for styling and structuring the web page layout, elements, and components.
 import styled from 'styled-components';
 import { RiBookMarkLine } from 'react-icons/ri';
 import DropdownList from 'react-widgets/DropdownList';
